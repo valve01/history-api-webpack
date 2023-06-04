@@ -1,0 +1,41 @@
+@import "~normalize.css";
+
+@import "roboto.css";
+
+$body-color: rgb(27, 224, 43);
+
+body {
+	color: $body-color;
+	background: #dada60;
+}
+
+
+
+.container {
+	display: grid;
+	padding-top: 2rem;
+	max-width: 1000px;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	font-family: Roboto, sans-serif;
+	background-image: linear-gradient(red, rgb(23, 13, 158));
+}
+
+.logo {
+	background-image: url("../assets/webpack-logo.png");
+	background-size: cover;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.code {
+	color: red;
+}
+
+input::placeholder {
+	color: rgb(14, 165, 165);
+}
