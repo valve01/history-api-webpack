@@ -1,33 +1,45 @@
 const app = document.querySelector("#app")
 
-const historyResolver = (title, location) => {
-    this.event.preventDefault();
+const usersEl = document.querySelector("[data-href='#/users/']")
 
-    console.log('click');
-
-    history.pushState({}, title, location)
-
+usersEl.addEventListener("click",locationResolver(e))
+ function locationResolver(e){
+	let location= e.target.dataset.href
     switch (location) {
-        case "/users/":
+        case "#/users/":
             app.innerHTML = `
                 <h1>${location}</h1>
-
                 <p>Страница с пользователями</p>
             `
             break
-        case "/login/":
+        case "#/login/":
             app.innerHTML = `
                 <h1>${location}</h1>
 
                 <p>Страница логина</p>
             `
             break
-        case "/":
+        case "#/":
             app.innerHTML = `
                 <h1>${location}</h1>
 
                 <p>Главная страница</p>
             `
             break
+
+
+
     }
+		// usersEl.addEventListener("click",locRel)
+		// function locRel (){window.location.reload()}
 }
+
+window.addEventListener('load', () => {
+    const location = window.location.hash
+
+    if (location) {
+        locationResolver(location)
+
+    }
+})
+

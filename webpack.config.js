@@ -1,4 +1,4 @@
-// Ставим вот это вот все: 
+// Ставим вот это вот все:
 
 // npm i -D @babel/core @babel/preset-env babel-loader copy-webpack-plugin cross-env css-loader css-minimizer-webpack-plugin csv-loader dart-sass eslint eslint-webpack-plugin file-loader html-webpack-plugin mini-css-extract-plugin postcss postcss-loader postcss-preset-env sass sass-loader style-loader terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server xml-loader xml2js
 
@@ -110,6 +110,10 @@ module.exports = {
 	},
 
 	devServer: {
+
+		// overlay: true,
+		// historyApiFallback: true,
+
 		hot: isDev,
 		watchFiles: [path.join(__dirname, "src/**/*.*"), path.join(__dirname, "*.*")],
 		port: 4400,

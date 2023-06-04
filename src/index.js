@@ -2,6 +2,7 @@ import * as $ from "jquery";
 import Post from "@models/Post";
 import json from "./assets/json.json";
 import "./styles/style.scss";
+import "./locationResolver"
 import xml from "./assets/data.xml";
 import csv from "./assets/data.csv";
 import Wlogo from "@/assets/webpack-logo.png";

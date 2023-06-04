@@ -8,4 +8,9 @@ module.exports = {
 		ecmaVersion: "latest",
 		sourceType: "module",
 	},
+	rules: {
+		eqeqeq: "off",
+		curly: "off",
+		quotes: "off",
+	},
 };
